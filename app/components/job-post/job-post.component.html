@@ -1,0 +1,56 @@
+<app-company-navbar></app-company-navbar>
+<div class="container">
+    <h1>Job Posting</h1>
+    <form [formGroup]="yourForm" (ngSubmit)="onSubmit()">
+        <div class="form-group inp-text">
+            <label>Job Title</label>
+            <input class="form-control" type="text" placeholder="Enter Title" formControlName="controltitle">
+            <div *ngIf="yourForm.controls['controltitle'].invalid && yourForm.controls['controltitle'].touched">
+                <span class="text-danger">Job title is required</span>
+            </div>
+        </div>
+
+        <div class="form-group inp-text">
+            <label>Company Name</label>
+            <input class="form-control" type="text" placeholder="Enter Company Name" formControlName="controlCompanyName">
+            <div *ngIf="yourForm.controls['controlCompanyName'].invalid && yourForm.controls['controlCompanyName'].touched">
+                <span class="text-danger">Company name is required</span>
+            </div>
+        </div>
+
+        <div class="form-group inp-text">
+            <label>Job Description</label>
+            <textarea class="form-control" placeholder="Enter Description" formControlName="controlJobDescription"></textarea>
+            <div *ngIf="yourForm.controls['controlJobDescription'].invalid && yourForm.controls['controlJobDescription'].touched">
+                <span class="text-danger">Job description is required</span>
+            </div>
+        </div>
+
+        <div class="form-group inp-text">
+            <label>Job Requirement</label>
+            <textarea class="form-control" placeholder="Enter Requirement" formControlName="controlJobRequirement"></textarea>
+            <div *ngIf="yourForm.controls['controlJobRequirement'].invalid && yourForm.controls['controlJobRequirement'].touched">
+                <span class="text-danger">Job requirement is required</span>
+            </div>
+        </div>
+
+        <div class="form-group inp-text">
+            <label>Job Salary</label>
+            <input class="form-control" type="number" placeholder="Enter Salary" formControlName="controlJobSalary">
+            <div *ngIf="yourForm.controls['controlJobSalary'].invalid && yourForm.controls['controlJobSalary'].touched">
+                <span class="text-danger">Job salary is required</span>
+            </div>
+        </div>
+
+        <div class="form-group inp-text">
+            <label>Application Deadline</label>
+            <input class="form-control" type="date" placeholder="Enter Date" formControlName="controlJobDeadline">
+            <div *ngIf="yourForm.controls['controlJobDeadline'].invalid && yourForm.controls['controlJobDeadline'].touched">
+                <span class="text-danger">Application deadline is required</span>
+            </div>
+        </div>
+
+        <button type="submit" class="submit" [disabled]="yourForm.invalid">Submit</button>
+    </form>
+    
+</div>

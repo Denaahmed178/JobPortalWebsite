@@ -1,0 +1,42 @@
+.parent{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 30px;
+}
+.container{
+   
+    background-color: rgb(169, 213, 183);
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.container h3{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 10px;
+}
+.list-ul
+{
+    margin-top: 50px;
+    /* border: 2px ;
+    border-style: solid;
+    border-color: rgb(143, 170, 143); */
+    margin-bottom: 400px;
+}
+hr{
+    color:  rgb(106, 139, 106);  
+}
+.editjob{
+
+    float: right;
+}
+.delete-btn{
+    float: right;
+    margin-right: 20px;
+}
+.list-ul li {
+    margin-bottom: 30px;
+    border: 2px ;
+    border-style: solid;
+    border-color: rgb(143, 170, 143); 
+}

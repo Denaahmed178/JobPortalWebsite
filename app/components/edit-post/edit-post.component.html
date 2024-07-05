@@ -1,0 +1,18 @@
+<app-company-navbar></app-company-navbar>
+<div class="div-container">
+    <diV *ngIf="!jobId">
+        <p class="alert alert-danger">There is no job id</p>
+    </diV>
+    <div *ngIf="jobId" class="content">
+        <h3>Edit {{job.job_title}} post </h3>
+        <input type="text" class="form-control" placeholder="Job Title"  [(ngModel)]="job.job_title">
+        <input type="text" class="form-control" placeholder="Company Name"  [(ngModel)]="job.company_name">
+        <textarea class="form-control" placeholder="Write job description"  [(ngModel)]="job.job_description"></textarea>
+        <textarea class="form-control" placeholder="Write job requirement" [(ngModel)]="job.job_requirement"></textarea>
+        <input type="text" class="form-control" placeholder="Salary" [(ngModel)]="job.salary">
+        <input type="date" class="form-control"  placeholder="Deadline" [(ngModel)]="job.job_deadline">
+        <button class="edit btn btn-info" (click)="Editpost()">Save</button>
+        <a routerLink="/Manage-Post" class="cancel btn btn-secondary">Cancel</a>
+    </div>
+
+</div>

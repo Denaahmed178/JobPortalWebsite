@@ -1,0 +1,30 @@
+<app-company-navbar></app-company-navbar>
+<div class="parent">
+        <div *ngIf="jobserve.jobs.length==0">
+            <p class="alert alert-danger">
+                No Jobs Posted.
+            </p>
+        </div>
+        <div class="container" *ngIf="jobserve.jobs.length!=0">
+            <h3>Job Posts</h3>
+            <ul class="list-group list-ul">
+                <li  class="list-group-item" *ngFor="let job of jobserve.jobs; index as i">
+                    <span>Jop Title: {{job.job_title}}</span><br><br>
+                    <!-- <hr>
+                    <p>Job Description: {{job.job_description}}</p>
+                    <hr>
+                    <p>Job Requirement: {{job. job_requirement}}</p>
+                    <hr>
+                    <p>Job Salary: {{job.job_salary}}</p>
+                    <hr>
+                    <p>Application Deadline: {{job.job_deadline}}</p> -->
+                    
+                    <a class="editjob btn btn-secondary" [routerLink]="['/Edit-Post' , i]">Edit Post</a>
+                    <button class="delete-btn btn btn-danger" (click)="deleteJob(i,job)">
+                        Delete Post
+                      </button>
+                </li>
+
+            </ul>
+       </div>
+</div>

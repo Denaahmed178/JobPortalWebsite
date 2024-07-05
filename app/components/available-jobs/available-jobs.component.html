@@ -1,0 +1,62 @@
+<app-user-navbar></app-user-navbar>
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid ">
+        <a class="logo navbar-brand ms-5" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="links navbar-nav me-auto ms-5 mb-2 mb-lg-0">
+            <li class="link-item nav-item me-2">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+
+            <li class="link-item nav-item me-2">
+            <a class="nav-link" href="#">Profile</a>
+            </li>
+
+            <li class="link-item nav-item me-2">
+            <a class="nav-link" href="#">Saved Jobs</a>
+            </li>
+        </ul>
+        <form class="d-flex">
+            <button class="btn btn-outline-success me-5" type="submit">Log out</button>
+        </form>
+        </div>
+    </div>
+</nav> -->
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="jobs col-12">
+            <h1 class="title text-center">available jobs</h1>
+            <span class="line"></span>
+            <div class="avail-jobs">
+                
+                <ul class="jobs-list mt-5">
+                    <li class="job-item" *ngFor = "let job of  JobServices.jobs; index as i">
+                        <button class="saved float-end" (click)="toggleSave(i)">
+                            <fa-icon [icon]="job.isSaved ? faBookmark : faBookmark" class="me-2"></fa-icon>
+                            <span *ngIf="!job.isSaved">save</span>
+                            <span *ngIf="job.isSaved">saved</span>
+                          </button>
+                        <div class="job-details">
+                            
+                            <h2 class="job-title"> {{job.job_title}} </h2>
+                            <p class="job-desc"> {{job.job_description}} </p>
+                            
+                            <p class="com-name"> <span>company name: </span> {{job.company_name}} </p>
+                            <div class="btns float-end">
+                                <button class="apply me-3" [routerLink]="['/job-form',i]"  >apply</button>
+                                <button [routerLink]="['/job-details',i]" class="details">more details</button>
+                            </div>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+

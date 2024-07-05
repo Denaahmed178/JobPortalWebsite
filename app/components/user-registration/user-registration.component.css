@@ -1,0 +1,74 @@
+.weak {
+    color: red;
+     font-size: 20px;
+  }
+  
+  .medium {
+    color: orange;
+    font-size: 20px;
+  }
+  
+  .strong {
+    color: green;
+    font-size: 20px;
+  }
+  .user-registration-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  label {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  input {
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    padding-left: 30px;
+    width: 30%;
+  }
+  
+  button {
+    background-color: darkgreen;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 10%;
+    text-align: center;
+  }
+  .workExperience {
+    width: 50%;
+  }
+  
+  h2 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+    color:rgb(11, 92, 50);
+  }
+  button.interaction:hover {
+    background-color: rgb(64, 132, 97);
+    font-size: 22px;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 22px;
+  }
+  .uppercase-message {
+    color: red;
+    font-size: 20px;
+  }
+  
+  .has-uppercase-message {
+    color: green;
+    font-size: 20px;
+  }
+  

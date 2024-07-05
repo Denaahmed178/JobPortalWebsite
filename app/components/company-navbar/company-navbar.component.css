@@ -1,0 +1,20 @@
+.nav-item{
+  width: 263px;
+  height: 37px;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.nav-link{
+  text-align: center;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+.label{
+  color: #19C79B;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  align-self: flex-start;
+ margin-right: 10px;
+}

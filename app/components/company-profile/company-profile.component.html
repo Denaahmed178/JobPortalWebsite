@@ -1,0 +1,30 @@
+<app-company-navbar></app-company-navbar>
+<div class="container">
+    <div class="head">
+        <button class="edit_com"  routerLink="/Edit-Company">Edit profile</button>
+    </div>
+    <div class="follow">
+        <h4>{{comserve.company[0].CompanyName}}</h4>
+        <button class="btn-follow">Follow</button>
+        <button class="btn-visit">Visit website</button>
+    </div>
+    <div class="info">
+        <h5 class="about_title">About Company</h5>
+        <div class="about">
+            <p class="info_p">{{comserve.company[0].CompanyDescription}}</p>
+        </div>
+        <h5 class="btn-contact">Contact info</h5>
+        <div class="div_content">
+            <p class="info_p">Company Email: {{comserve.company[0].email}}</p>
+            <p class="info_p">Company PhoneNumber: {{comserve.company[0].phoneNumber}}</p>
+        </div>
+        <div class="route-div">
+            <button routerLink="/jobPost" class="job-post-route">Start new job post</button>
+        </div>
+    </div>
+    <div>
+        <button class="btntodel" routerLink="/Manage-Post">Delete or Edit Posts</button>
+    </div>
+    
+
+</div>

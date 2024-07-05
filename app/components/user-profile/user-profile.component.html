@@ -1,0 +1,63 @@
+<app-user-navbar></app-user-navbar>
+
+<div class="profile-container">
+  <div class="left-rectangle">
+    <div class="image-container">
+      <img src="https://qph.cf2.quoracdn.net/main-qimg-6d72b77c81c9841bd98fc806d702e859-lq" alt="Facebook Profile Update" />
+    </div>
+    <!-- <div class="user-name">
+      <div class="user-name">
+        <p *ngIf=" editName">{{ user.name }}</p>
+        <ng-template #editName>
+          <input
+            class="attribute-input"
+            type="text"
+            [(ngModel)]="editedUser.name"
+          />
+        </ng-template>
+      </div>
+    </div> -->
+    
+  </div>
+
+  <div class="right-rectangle">
+    <div class="user-info">
+          <p class="attribute-label">Name:</p>
+          <p class="attribute-value">{{ Name }}</p>
+
+          <p class="attribute-label">Gender:</p>
+          <p class="attribute-value">{{ Gender }}</p>
+
+          <p class="attribute-label">Date of Birth:</p>
+          <p class="attribute-value">{{ Birthday }}</p>
+
+          <p class="attribute-label">Phone Number:</p>
+          <p class="attribute-value">{{ phone }}</p>
+
+          <p class="attribute-label">Address:</p>
+          <p class="attribute-value">{{   Address }}</p>
+
+          <p class="attribute-label">Email:</p>
+          <p class="attribute-value">{{ Email }}</p>
+
+          <p class="attribute-label">Experience:</p>
+          <p class="attribute-value">{{   Experience }}</p>
+          <li *ngFor="let skill of Skills">{{ skill }} </li>
+          <li *ngIf="Skills.length === 0">
+            No saved Skills found.
+          </li>
+      </div>
+        <!-- <p class="attribute-value" *ngIf="!editMode">{{ user[attr.key] }}</p> -->
+        <!-- <input
+          class="attribute-input"
+          [type]="attr.key === 'dateOfBirth' ? 'date' : 'text'"
+          [(ngModel)]="editedUser[attr.key]"
+          *ngIf="editMode"
+        /> -->
+      </div>
+    <div class="button-group">
+      <button class="edit-profile-btn" [routerLink]="['/edit-profile',id]" >
+        edit Profile
+      </button>
+    </div>
+  </div>

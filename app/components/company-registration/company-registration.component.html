@@ -1,0 +1,48 @@
+<div class="user-registration-container">
+    <h2>Company Registration</h2>
+    
+    <label for="companyname">CompanyName:</label>
+    <input type="text" id="companyname" [(ngModel)]="companyname"><br>
+    
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" [(ngModel)]="email"><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" [(ngModel)]="password" (input)="checkPasswordStrength()"(focus)="clearErrorMessage()"><br>
+    <div *ngIf="password.length > 0" [ngClass]="{'weak': isWeakPassword(), 'medium': isMediumPassword(), 'strong': isStrongPassword()}">
+      {{ getPasswordStrengthMessage() }}
+    </div>
+    <div *ngIf="showUpperCaseMessage()" class="uppercase-message">
+      Password should contain at least one uppercase letter.
+    </div>
+    <div *ngIf="hasUpperCaseLetter(password)" class="has-uppercase-message">
+      Password contains at least one uppercase letter.
+    </div>
+    
+    
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword"(focus)="clearErrorMessage()"><br>
+    
+    
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="tel" id="phoneNumber" [(ngModel)]="phoneNumber"><br>
+
+    <label for="companytype">Company Type:</label>
+    <input type="text" id="companytype" [(ngModel)]="companytype"><br>
+
+    <label for="numberofEmployees"> Number of Employees:</label>
+    <input type="number" id="numberofEmployees" [(ngModel)]="numberofEmployees"><br>
+
+    <label for="companyDescription">Company Description:</label>
+    <input type="text" id="companyDescription" [(ngModel)]="companyDescription"><br>
+
+    <label for="experience">Experience:</label>
+    <input type="text" id="experience" [(ngModel)]="experience"><br>
+
+    <div *ngIf="showErrorMessage" class="error-message">
+        Passwords do not match!
+      </div>
+      
+      <button class="interaction" (click)="submitForm()" >Submit</button>
+    </div>
+    

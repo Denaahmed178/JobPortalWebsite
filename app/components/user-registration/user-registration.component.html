@@ -1,0 +1,70 @@
+<div class="user-registration-container">
+  <h2>User Registration</h2>
+
+  <label for="username">UserName:</label>
+  <input type="text" id="username" [(ngModel)]="username" /><br />
+
+  <label for="email">Email Address:</label>
+  <input type="email" id="email" [(ngModel)]="email" /><br />
+
+  <label for="password">Password:</label>
+  <input
+    type="password"
+    required
+    id="password"
+    [(ngModel)]="password"
+    (input)="checkPasswordStrength()"
+    (focus)="clearErrorMessage()"
+  /><br />
+  <div
+    *ngIf="password.length > 0"
+    [ngClass]="{
+      weak: isWeakPassword(),
+      medium: isMediumPassword(),
+      strong: isStrongPassword()
+    }"
+  >
+    {{ getPasswordStrengthMessage() }}
+  </div>
+  <div *ngIf="showUpperCaseMessage()" class="uppercase-message">
+    Password should contain at least one uppercase letter.
+  </div>
+  <div *ngIf="hasUpperCaseLetter(password)" class="has-uppercase-message">
+    Password contains at least one uppercase letter.
+  </div>
+
+  <label for="confirmPassword">Confirm Password:</label>
+  <input
+    type="password"
+    id="confirmPassword"
+    [(ngModel)]="confirmPassword"
+    (focus)="clearErrorMessage()"
+  /><br />
+
+  <label for="phoneNumber">Phone Number:</label>
+  <input type="tel" id="phoneNumber" [(ngModel)]="phoneNumber" /><br />
+
+  <div class="workExperience">
+    <label for="workExperience">Work Experience:</label>
+    <select id="workExperience" [(ngModel)]="workExperience">
+      <option value="none">None</option>
+      <option value="1-3">1-3 years</option>
+      <option value="4-6">4-6 years</option>
+      <option value="7+">7+ years</option></select
+    ><br />
+  </div>
+  <br />
+  <label for="skills">Skills:</label>
+  <input type="text" id="skills" [(ngModel)]="skills" /><br />
+
+  <label for="education">Education:</label>
+  <input type="text" id="education" [(ngModel)]="education" /><br />
+
+  <div *ngIf="showErrorMessage" class="error-message">
+    Passwords do not match!
+  </div>
+
+  <button class="interaction" (click)="submitForm()">
+    Submit
+  </button>
+</div>

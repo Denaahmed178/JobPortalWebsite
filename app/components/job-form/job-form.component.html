@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<app-user-navbar></app-user-navbar>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Form</title>
+  
+</head>
+<body>
+  <div class="container">
+    <div class="form-header">
+      <h2>Job Application Form</h2>
+    </div>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName"  [(ngModel)]="name_user"required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" [(ngModel)]="email_user" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone"  [(ngModel)]="Phone_user" required>
+      </div>
+      <div class="form-group">
+        <label for="cv">Upload CV</label>
+        <input type="cv" id="cv" name="cv" required   [(ngModel)]="cv_user" accept=".pdf,.doc,.docx">
+      </div>
+  <div class="form-group">
+    <button class="submit-button" (click)="onSubmit()" >Submit Application</button>
+  <!-- <a routerLink="/ApplyNewPageComponent" class="submit-button" routerLink="/confirmation">Submit Application</a> -->
+</div>
+
+    </form>
+  </div>
+</body>
+</html>

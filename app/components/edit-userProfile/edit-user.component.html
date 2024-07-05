@@ -1,0 +1,16 @@
+<app-user-navbar></app-user-navbar>
+<div class="div-container container">
+    <!-- <diV *ngIf="!jobId">
+        <p class="alert alert-danger">There is no job id</p>
+    </diV> -->
+    <!-- <div *ngIf="jobId" class="content"> -->
+        <h3>Edit Profile </h3>
+        <input type="text" class="form-control" placeholder="Username" [(ngModel)]="name">
+        <input type="text" class="form-control" placeholder="address" [(ngModel)]="address">
+        <input type="email" class="form-control" placeholder="email" [(ngModel)]="email">
+        <input type="number" class="form-control"  placeholder="phoneNumber"  [(ngModel)]="phoneNumber">
+        <button class="edit btn btn-info" (click)="EditUser()">Save</button>
+        <a routerLink="/user-Profile" class="cancel btn btn-secondary">Cancel</a>
+    <!-- </div> -->
+
+</div>

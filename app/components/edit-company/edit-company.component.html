@@ -1,0 +1,16 @@
+<app-company-navbar></app-company-navbar>
+<div class="div-container container">
+    <!-- <diV *ngIf="!jobId">
+        <p class="alert alert-danger">There is no job id</p>
+    </diV> -->
+    <!-- <div *ngIf="jobId" class="content"> -->
+        <h3>Edit {{comservices.company[0].CompanyName}} Profile </h3>
+        <input type="text" class="form-control"  [(ngModel)]="company.CompanyName">
+        <textarea class="form-control"  [(ngModel)]="company[0].CompanyDescription"></textarea>
+        <input type="email" class="form-control" [(ngModel)]="company.email">
+        <input type="text" class="form-control"   [(ngModel)]="company.phoneNumber">
+        <button class="edit btn btn-info" (click)="EditCompany()">Save</button>
+        <a routerLink="/Company-Profile" class="cancel btn btn-secondary">Cancel</a>
+    <!-- </div> -->
+
+</div>

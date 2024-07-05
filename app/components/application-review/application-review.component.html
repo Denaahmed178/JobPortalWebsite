@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<app-company-navbar></app-company-navbar>
+  <!-- Header -->
+  <header>
+      <h1 id="Page-header">Applications Review</h1>
+  </header>
+
+  <div class="left-side">
+    <iframe id="iframe" src="https://www.sbs.ox.ac.uk/sites/default/files/2019-01/cv-template.pdf"></iframe>
+  </div>
+
+  <div class="right-side">
+    <!-- Jobs Dropdown List -->
+    <div class="droplist-container" *ngIf="(Jobs | async) as Jobs" >
+      <label for="jobsDroplist" class="label">Listed Jobs</label>
+      <select id="jobsDroplist" class="droplist" [(ngModel)]="selectedJob" (change)="getApplicants(selectedJob)">
+        <option value="Job" *ngFor="let name of Jobs" [value]="name">{{ name }}</option>
+      </select>
+      
+      
+    </div>
+
+    <!-- Dynamic Panel with all Applicants -->
+
+    <div id="Panel" class="panel" >
+      <label>Applicants</label>
+        <div id="state1" class="panel_state"
+          data-label="job1" *ngIf="(applicantNames | async) as applicantNames" >
+          <!-- Jobs (Droplist) -->
+            <select id="list-1" class="droplist" [(ngModel)]="selectedApplicant" (change)="getStatusForUser(selectedApplicant)" >
+              <option class="u6_input_option" selected="" *ngFor="let name of applicantNames" [value]="name" >{{ name }}</option>
+            </select>
+        </div>
+        
+    </div>
+
+    <!-- Application Status -->
+    <div id="status-container">
+      <label> Application current status </label> 
+      <div id="status-container"><label id="status"> {{ status }}</label> </div>
+    </div>
+
+    <!-- Status Buttons -->
+    <div id="buttons-container">
+      <button id="accept-button" class="button" (click)="setStatusForUser(selectedApplicant,true)">Accepted</button>
+      <button id="reject-button" class="button" (click)="setStatusForUser(selectedApplicant,false)" >Rejected</button>
+    </div>
+
+    <div>
+      <label id="Accepted-Msg" [style.display]="(isAccepted == true) ?'block': 'none' "
+        >has been accepted</label
+      >
+      <label id="Rejected-Msg"
+      [style.display]="(isRejected == true) ?'block': 'none' " >has been rejected</label
+      >
+    </div>
+  </div>
+</body>
+</html>

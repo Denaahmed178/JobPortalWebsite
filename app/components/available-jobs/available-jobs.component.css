@@ -1,0 +1,112 @@
+.logo {
+    margin-left: 10% !important;
+}
+
+.links {
+    margin-left: 20% !important;
+}
+
+.links .link-item {
+    margin-left: 60px !important;
+    font-size: 1.2em;
+}
+
+.jobs .title {
+    color: #333333 !important;
+    text-transform: capitalize;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px #008080;
+    font-size: 3em;
+}
+
+.jobs .line {
+    display: block;
+    width: 380px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #008080;
+    margin: 0 auto; 
+
+}
+
+.avail-jobs {
+    width: 70%;
+    margin: auto;
+    /* margin-top: 30px; */
+}
+
+.avail-jobs .jobs-list {
+    list-style-type: none;
+}
+
+.jobs-list .job-item {
+    border: 2px solid ;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 2px #008080;
+    overflow: hidden;
+}
+
+.job-item .job-details {
+    width: 95%;
+    overflow: hidden;
+}
+.job-item .btns{
+    /* margin-bottom: 20px; */
+    margin-top: 15px;
+}
+
+.job-item .job-title{
+    margin: 10px 0 10px 8%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    text-shadow: 1px 1px 3px  #003434;
+}
+
+.job-item .job-desc {
+    margin-left: 15%;
+    font-size: 1.2em;
+    text-transform: capitalize;
+}
+
+.job-item .com-name{
+    margin-left: 15%;
+    text-transform: capitalize;
+    font-size: 1.2em;
+}
+
+.com-name span {
+    font-weight: bold;
+    font-size: 1.3em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btns button {
+    font-size: 1.2em;
+    text-transform: capitalize;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #008080;
+    color: white;
+    border: none;
+    margin-bottom: 10px;
+    width: 150px;
+}
+
+.btns button:hover {
+    background-color: #035e5e;
+}
+
+.job-item .saved {
+    margin: 5px;
+    width: 100px;
+    font-size: 1.2em;
+    text-transform: capitalize;
+    border-radius: 20px;
+}
+
+.job-item .saved:hover {
+    background-color: gray;
+}

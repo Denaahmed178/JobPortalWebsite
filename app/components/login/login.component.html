@@ -1,0 +1,19 @@
+<div id="PageContainer">
+  <div class="loginElements">
+    <label id="login-header">LOG IN</label>
+    <input type="email" id="email_input" [(ngModel)]="email" placeholder="Enter your email" />
+    <input [(ngModel)]="password" type="password" id="password_input" placeholder="Enter your password" />
+    <button id="btn_login" (click)="checkCredentials()" >LOGIN</button>
+  </div>
+
+  <!-- <div  *ngIf="loginResult == false" id="error-message"> -->
+    <p *ngIf="loginResult == false" id="error-message" >Invalid email or password.</p>
+<!-- </div> -->
+
+  <div>
+    <p id="footer">Sign up as</p>
+    <a id="link1" [routerLink]="['/user-registration']">job seeker</a>
+    <p id="or">or</p>
+    <a id="link2" [routerLink]="['/company-registration']">company</a>
+  </div>
+</div>

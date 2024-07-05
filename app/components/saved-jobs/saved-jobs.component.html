@@ -1,0 +1,21 @@
+<app-user-navbar></app-user-navbar>
+<body>
+  <header>
+    <div id="header-container">
+      <img id="u156_img" class="img" src="assets/images/u82.svg" alt="Image" />
+      <h1 id="header">Saved Jobs</h1>
+    </div>
+  </header>
+
+  <main>
+    <ul class="list-group">
+      <li *ngFor="let job of userSavedJobs" style="width: 682px; height: 59px; left: 20%;" >
+          {{ job }} <button class="btn-view">View Job</button>
+    </li>
+    <li *ngIf="userSavedJobs.length === 0">
+      No saved jobs found.
+    </li>
+      <!-- Add more job items here -->
+    </ul>
+  </main>
+</body>

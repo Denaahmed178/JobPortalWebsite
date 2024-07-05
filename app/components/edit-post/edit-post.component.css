@@ -1,0 +1,26 @@
+
+.div-container{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: rgb(169, 213, 183);;
+}
+h3{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    
+}
+.content{
+    width: 90%;
+    margin-left: 5%;
+    padding-bottom: 30px;
+}
+.edit{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.cancel{
+    margin-top: 10px;
+}

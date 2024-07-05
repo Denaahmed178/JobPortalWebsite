@@ -1,0 +1,72 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+
+#header-container {
+  border: 0;
+  width: 267px;
+  height: 45px;
+  display: flex;
+  align-items: flex-start; /* Align header text to the bottom */
+  font-family: 'Georgia Bold', 'Georgia Regular', 'Georgia', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 35px;
+  margin-left: 36px; /* Use margin instead of absolute positioning */
+}
+
+#header {
+  margin: 0;
+  position: absolute;
+  align-self: flex-start;
+  padding: 0px 0px 5px 0px;
+
+  word-wrap: break-word;
+  text-shadow: 1px 1px 5px rgba(25, 199, 155, 0.992156862745098);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Job list styles */
+.list-group {
+  /* Add any necessary styles */
+  left: 50%;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  
+}
+
+.btn-view {
+  background-color: #19c79b;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  left: 20% ;
+}
+
+.btn-view:hover {
+  background-color: #17a88b; /* Slightly darker hover color */
+}
+
+.item-container {
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(121, 121, 121, 1);
+  border-radius: 0;
+  width: 682px;
+  height: 118px;
+  margin-top: 10px; /* Add margin to separate items */
+  position: absolute;
+  left: 36px;
+}
